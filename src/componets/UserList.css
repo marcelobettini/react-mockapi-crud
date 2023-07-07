@@ -1,6 +1,8 @@
 .user-list-container {
+  margin: 2rem 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 2rem 1rem;
   justify-content: space-around;
+  padding: 1rem;
 }

@@ -7,4 +7,10 @@
 
   :root {
     font-family: 'Roboto', sans-serif;
+    --clr1: #E4A5FF;
+    --clr2: #FFAAC9;
+    --clr3: #FFCDA8;
+    --clr4: #FFE7CE;
+    --grad: linear-gradient(to top right, var(--clr1), var(--clr2), var(--clr3), var(--clr4), var(--clr3), var(--clr2), var(--clr1));
+    overflow-y: scroll;
   }

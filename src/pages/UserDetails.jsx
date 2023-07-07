@@ -1,5 +1,7 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import Header from '../componets/Header';
+import UserForm from '../componets/UserForm';
 
 function UserDetails() {
   const location = useLocation();
@@ -12,8 +14,13 @@ function UserDetails() {
     </>
   );
   return (
-    <div><h2>UserDetails</h2>
-      <p>{user.name}</p></div>
+    <>
+      <Header title={"Detalles de usuario"} />
+      <UserForm user={user} />
+
+
+
+    </>
   );
 }
 

@@ -1,0 +1,23 @@
+.navlink {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: whitesmoke;
+  background-color: black;
+  border-radius: 7px;
+  padding: .4rem;
+  margin: 0 1rem;
+  display: inline-block;
+  text-align: center;
+  width: 80px;
+  transition: all ease-in 100ms;
+}
+
+.navlink:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.navlink:active {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.6);
+}

@@ -1,0 +1,16 @@
+.user-form {
+  padding: 2rem;
+  margin: 0 auto;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 7px;
+  box-shadow: 3px 3px 6px;
+  background: var(--grad);
+}
+
+.user-form input {
+  line-height: 1.7rem;
+  padding: .2rem;
+  margin-bottom: 1rem;
+}

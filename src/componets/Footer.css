@@ -1,0 +1,14 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  bottom: 0;
+  height: 150px;
+  background-color: var(--clr1);
+  text-align: center;
+}
+
+.footer input {
+  line-height: 2rem;
+}

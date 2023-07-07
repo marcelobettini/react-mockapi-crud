@@ -14,3 +14,6 @@ export const getAllUsers = async () => {
     throw err; //Propagate the error to the calling code
   }
 };
+export const deleteUserById = async id => {
+  alert(`Id : ${id}`);
+};

@@ -17,9 +17,6 @@ function UserDetails() {
     <>
       <Header title={"Detalles de usuario"} />
       <UserForm user={user} />
-
-
-
     </>
   );
 }

@@ -3,7 +3,7 @@ import UsersList from "./componets/UsersList";
 import UserDetails from "./pages/UserDetails";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Navbar from "./componets/Navbar";
+
 import Footer from "./componets/Footer";
 function App() {
   return (

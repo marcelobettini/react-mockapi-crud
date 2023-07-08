@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { formatDate } from '../utils/formatDate';
 import './UserForm.css';
 import { deleteUserById } from '../services/userService';
+import { useNavigate } from 'react-router-dom';
+import { UserCtx } from '../context/UserContext';
 function UserForm({ user }) {
-  const handleDelete = () => {
-    deleteUserById(user.id);
+  const { toggleReload } = useContext(UserCtx);
+
+  const navigate = useNavigate();
+  const handleDelete = async () => {
+    await deleteUserById(user.id);
+    toggleReload();
+    navigate("/");
   };
 
   return (
@@ -18,7 +26,7 @@ function UserForm({ user }) {
           <label htmlFor="phone">Teléfono:</label>
           <input type="text" id='phone' value={user.phone} />
           <label htmlFor="created">Fecha de alta:</label>
-          <input type="text" id='created' value={user.createdAt} />
+          <input type="text" id='created' value={formatDate(user.createdAt)} disabled />
         </div>
         <div className="form-buttons">
           <input type="submit" value="editar" />

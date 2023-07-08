@@ -1,12 +1,12 @@
 import React from 'react';
 import './User.css';
 import { useNavigate } from 'react-router-dom';
+import { formatDate } from '../utils/formatDate';
 
 function User({ user }) {
   const navigate = useNavigate();
   const { createdAt, name, email, phone, id } = user;
   const handleUserClick = () => {
-    console.log(user);
     navigate("/details", { state: { user } });
   };
   return (
@@ -15,7 +15,7 @@ function User({ user }) {
         <h3>{name}</h3>
         <p>Correo E: {email}</p>
         <p>Teléfono: {phone}</p>
-        <p>Fecha de alta: {new Date(createdAt).toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</p>
+        <p>Fecha de alta: {formatDate(createdAt)}</p>
       </div>
     </article>
   );

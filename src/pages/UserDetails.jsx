@@ -8,10 +8,10 @@ function UserDetails() {
   const navigate = useNavigate();
   const user = location.state?.user;
   if (!user) return (
-    <>
+    <div>
       <h1>What R U doing here?</h1>
       <button onClick={() => navigate("/")}>go back</button>
-    </>
+    </div>
   );
   return (
     <>

@@ -7,6 +7,7 @@ export const UserCtxProvider = ({ children }) => {
   const [users, setUsers] = useState([]);
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [reload, toggleReload] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,8 +24,8 @@ export const UserCtxProvider = ({ children }) => {
       }
     };
     fetchData();
-  }, []);
+  }, [reload]);
   return (
-    <UserCtx.Provider value={{ users, error, isLoading, setUsers }}>{children}</UserCtx.Provider>
+    <UserCtx.Provider value={{ users, error, isLoading, setUsers, toggleReload }}>{children}</UserCtx.Provider>
   );
 };

@@ -1,21 +1,16 @@
 export const getAllUsers = async () => {
-  const controller = new AbortController();
   try {
     const res = await fetch(
-      "https://647a6c1bd2e5b6101db05747.mockapi.io/users",
-      { signal: controller.signal } //pass the signal to fetch request
+      "https://647a6c1bd2e5b6101db05747.mockapi.io/users"
     );
     if (!res.ok) throw new Error("Response not ok");
     const data = await res.json();
     return data;
   } catch (err) {
-    controller.abort();
     throw err; //Propagate the error to the calling code
   }
 };
 export const deleteUserById = async id => {
-  const controller = new AbortController();
-
   try {
     const res = await fetch(
       `https://647a6c1bd2e5b6101db05747.mockapi.io/users/${id}`,
@@ -24,14 +19,31 @@ export const deleteUserById = async id => {
         headers: {
           Accept: "application/json",
         },
-        signal: controller.signal,
       }
     );
     if (!res.ok) throw new Error("Response not ok");
     const data = await res.json();
     return data;
   } catch (err) {
-    controller.abort();
+    throw err; //Propagate the error to the calling code
+  }
+};
+export const updateUserById = async (id, user) => {
+  try {
+    const res = await fetch(
+      `https://647a6c1bd2e5b6101db05747.mockapi.io/users/${id}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(user),
+      }
+    );
+    if (!res.ok) throw new Error("Response not ok");
+    const data = await res.json();
+    return data;
+  } catch (err) {
     throw err; //Propagate the error to the calling code
   }
 };

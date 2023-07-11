@@ -1,4 +1,4 @@
-import React, { useContext, useState, useMemo, useCallback } from 'react';
+import React, { useContext, useState, useMemo } from 'react';
 import { UserCtx } from '../context/UserContext';
 import './UserList.css';
 import Header from './Header';
@@ -8,7 +8,7 @@ import Search from './Search';
 function UsersList() {
   const { users, isLoading, error } = useContext(UserCtx);
   const [sortOrder, setSortOrder] = useState('asc');
-  const [queryString, setQueryString] = useState("B");
+  const [queryString, setQueryString] = useState("");
   let sortedUsers = useMemo(() => {
     const clonedUsers = [...users];
     clonedUsers.sort((a, b) => {

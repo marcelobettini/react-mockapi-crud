@@ -1,0 +1,10 @@
+.sort {
+  display: flex;
+  background: var(--clr2);
+  padding: .2rem;
+  column-gap: .4rem;
+  align-items: center;
+  cursor: pointer;
+  width: 220px;
+
+}

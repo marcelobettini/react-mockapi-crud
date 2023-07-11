@@ -1,0 +1,7 @@
+.search-form input {
+  line-height: 1.5rem;
+  font-size: 1rem;
+  border: 0;
+  padding: .2rem;
+  background: var(--clr2);
+}

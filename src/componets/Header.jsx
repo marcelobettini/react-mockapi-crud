@@ -2,13 +2,15 @@ import React from 'react';
 import './Header.css';
 import Navbar from './Navbar';
 
-function Header({ title }) {
+function Header({ title, children }) {
   return (
     <header className='header'>
-      <>
+      <div className='menu-title'>
+
         <Navbar />
-      </>
-      <h1>{title}</h1>
+        <h1>{title}</h1>
+      </div>
+      {children}
     </header>
   );
 }

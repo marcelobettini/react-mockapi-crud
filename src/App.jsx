@@ -3,8 +3,8 @@ import UsersList from "./componets/UsersList";
 import UserDetails from "./pages/UserDetails";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
-
 import Footer from "./componets/Footer";
+import NotFound from "./pages/NotFound";
 function App() {
   return (
     <div className="container">
@@ -13,7 +13,7 @@ function App() {
           <Route path="/" element={<UsersList />} />
           <Route path="/about" element={<About />} />
           <Route path="/details" element={<UserDetails />} />
-          <Route path="*" element={<h1>Not found</h1>} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
       <Footer />

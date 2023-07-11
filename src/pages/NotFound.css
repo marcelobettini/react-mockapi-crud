@@ -1,0 +1,20 @@
+.not-found {
+  display: flex;
+  flex-basis: content;
+  justify-content: center;
+  bottom: 100;
+}
+
+.not-found img {
+  position: relative;
+  width: 70%;
+}
+
+.big-text {
+  position: absolute;
+  bottom: 60%;
+  font-size: 8rem;
+  font-weight: 900;
+  COLOR: white;
+  z-index: 0;
+}

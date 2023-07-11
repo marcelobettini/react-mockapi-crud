@@ -7,19 +7,14 @@ function UserDetails() {
   const location = useLocation();
   const navigate = useNavigate();
   const user = location.state?.user;
+
   useEffect(() => {
     if (!user) {
-      navigate("/");
+      navigate("/not-found");
     }
-  }, []);
+  }, [user]);
 
 
-  // return (
-  //   <div>
-  //     <h1>What R U doing here?</h1>
-  //     <button onClick={() => navigate("/")}>go back</button>
-  //   </div>
-  // );
   return user && (
     <>
       <Header title={"Detalles de usuario"} />
